@@ -1,0 +1,21 @@
+{
+  "name": "team-profile-generator-master",
+  "version": "1.0.0",
+  "description": "![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
