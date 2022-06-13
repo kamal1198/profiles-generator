@@ -193,3 +193,27 @@ const addEmployee = () => {
         })
 
 };
+
+// function to generate HTML page file using file system 
+const writeHTML = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("Team profile has been successfully created inside the dist folder!");
+        }
+    })
+};
+
+addManager()
+    .then(addEmployee)
+    .then(employees => {
+        return generatePage(employees);
+    })
+    .then(page => {
+        return writeHTML(page);
+    })
+    .catch(err => {
+        console.log(err);
+    });
