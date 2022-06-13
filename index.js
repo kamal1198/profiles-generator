@@ -28,7 +28,6 @@ function addManager() {
                 }
             }
         },
-
         {
             type: 'input',
             name: 'id',
