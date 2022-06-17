@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+const PORT = process.env.PORT || 3001;
 // utility to generate the HTML page
 const buildHtml = require('./src/htmlUtility');
 const collectData = require('./src/collectData');
