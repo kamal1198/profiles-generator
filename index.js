@@ -1,5 +1,7 @@
+const express = require('express');
 const fs = require('fs');
-
+const path = require('path');
+const app = express();
 const PORT = process.env.PORT || 3001;
 // utility to generate the HTML page
 const buildHtml = require('./src/htmlUtility');
@@ -17,3 +19,7 @@ const main = (async () => buildHtml(await collectData()))
 
 // write the page HTML to disk
 main().then(writeToDisk)
+
+app.listen(PORT, () => {
+    console.log(`app listening on port ${PORT}`)
+  })
